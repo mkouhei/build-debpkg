@@ -1,0 +1,10 @@
+language: python
+sudo: true
+before_install:
+  - sudo apt-get update -qq
+  - sudo apt-get install -y cowbuilder devscripts
+  - DISTRIBUTION=sid sudo cowbuilder --create
+install:
+  - dget http://http.debian.net/debian/pool/main/p/pystache/pystache_0.5.4-5.dsc
+script:
+  - sudo cowbuilder --build pystache_0.5.4-5.dsc
