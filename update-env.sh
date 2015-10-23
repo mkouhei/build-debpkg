@@ -9,7 +9,7 @@ pkglist() {
 }
 
 cat <<EOF > ./.travis.yml
-language: python
+language: generic
 sudo: true
 before_install: ./before_install.sh
 env:
