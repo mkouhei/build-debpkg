@@ -3,5 +3,6 @@ sudo: true
 cache:
   directories:
     - $HOME/base.tgz
+    - $HOME/.gnupg/debian-maintainers.gpg
 script:
   - ./run-tests.sh
