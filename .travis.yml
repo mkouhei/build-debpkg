@@ -1,4 +1,4 @@
 language: python
 sudo: true
 script:
-  - ./run-tests.sh pystache
+  - ./run-tests.sh http://d.palmtb.net/_static/glaneuses.json
