@@ -1,4 +1,26 @@
 language: python
 sudo: true
+before_install: ./before_install.sh
+env:
+  - ENV_NAME=actdiag
+  - ENV_NAME=backup2swift
+  - ENV_NAME=blockdiag
+  - ENV_NAME=django-guardian
+  - ENV_NAME=django-shortuuidfield
+  - ENV_NAME=funcparserlib
+  - ENV_NAME=golang-github-mitchellh-mapstructure
+  - ENV_NAME=nwdiag
+  - ENV_NAME=pystache
+  - ENV_NAME=seqdiag
+  - ENV_NAME=shortuuid
+  - ENV_NAME=sphinx-testing
+  - ENV_NAME=sphinxcontrib-actdiag
+  - ENV_NAME=sphinxcontrib-blockdiag
+  - ENV_NAME=sphinxcontrib-nwdiag
+  - ENV_NAME=sphinxcontrib-seqdiag
+  - ENV_NAME=swiftsc
+  - ENV_NAME=tomahawk
+  - ENV_NAME=webcolors
+  - ENV_NAME=yrmcds
 script:
-  - ./run-tests.sh http://d.palmtb.net/_static/glaneuses.json
+    ./run-tests.sh $ENV_NAME
