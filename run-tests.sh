@@ -9,4 +9,4 @@ sudo apt-get install -y debian-archive-keyring/precise-backports
 sudo apt-get install -y debian-keyring/wily
 sudo pbuilder --create --basetgz $HOME/base.tgz --distribution sid --components main --mirror http://http.debian.net/debian --debootstrapopts "--keyring=/usr/share/keyrings/debian-archive-keyring.gpg"
 apt-get source ${1}/sid
-sudo pbuilder --build --basetgz $HOME/base.tgz ${1}.dsc
+sudo pbuilder --build --basetgz $HOME/base.tgz ${1}_*.dsc
