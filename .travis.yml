@@ -1,4 +1,4 @@
 language: python
 sudo: true
 script:
-  - ./run-tests.sh
+  - ./run-tests.sh pystache
